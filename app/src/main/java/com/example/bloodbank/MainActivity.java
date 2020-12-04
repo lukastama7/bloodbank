@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.CheckBox;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -24,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button button, btnlogin;
     EditText editusername, editpassword;
+    CheckBox showpassword;
     private static String URL_LOGIN = "https://sipunculid-float.000webhostapp.com/login.php";
 
     @Override
@@ -33,9 +38,21 @@ public class MainActivity extends AppCompatActivity {
 
         button=findViewById(R.id.btnregister);
         btnlogin=findViewById(R.id.btnlogin);
+        showpassword=findViewById(R.id.showpassword);
 
         editusername=findViewById(R.id.username);
         editpassword=findViewById(R.id.password);
+
+        showpassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b){
+                    editpassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                } else {
+                    editpassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
