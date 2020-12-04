@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center"
-    android:background="@color/red"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="212dp"
         android:layout_height="212dp"
-        android:src="@drawable/applogo1"
+        android:src="@drawable/applicationlogo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -23,42 +23,35 @@
 
     </ImageView>
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Any Body Can Save Lives"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.283" />
-
 
     <EditText
         android:id="@+id/username"
         android:layout_width="248dp"
         android:layout_height="40dp"
-        android:hint="Username"
         android:drawableLeft="@drawable/ic_account"
-        android:textColor="@color/white"
+        android:hint="Username"
+        android:drawablePadding="12dp"
+        android:background="@drawable/edittext_custom"
+        android:paddingLeft="12dp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.072" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="248dp"
         android:layout_height="40dp"
-        android:hint="Password"
         android:drawableLeft="@drawable/ic__lock"
+        android:drawablePadding="12dp"
+        android:paddingLeft="12dp"
+        android:hint="Password"
+        android:background="@drawable/edittext_custom"
         android:inputType="textPassword"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -77,25 +70,25 @@
         app:layout_constraintTop_toBottomOf="@+id/password"
         app:layout_constraintVertical_bias="0.0" />
 
-    <Button
-        android:id="@+id/btnregister"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:background="@drawable/rounded_button"
-        android:text="Register"
-        android:textColor="@color/white"
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/signup"
+        android:textSize="15dp"
+        android:textColor="@color/blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnlogin"
-        app:layout_constraintVertical_bias="0.048" />
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.953" />
+
 
     <Button
         android:id="@+id/btnlogin"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="236dp"
         android:background="@drawable/rounded_button"
         android:onClick="btnlogin"
         android:text="LOGIN"
@@ -104,9 +97,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/showpassword"
-        app:layout_constraintVertical_bias="0.0" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.704" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

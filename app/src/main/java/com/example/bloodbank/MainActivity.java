@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.CheckBox;
 
@@ -27,6 +28,7 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     Button button, btnlogin;
+    TextView signup;
     EditText editusername, editpassword;
     CheckBox showpassword;
     private static String URL_LOGIN = "https://sipunculid-float.000webhostapp.com/login.php";
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        button=findViewById(R.id.btnregister);
+        signup=findViewById(R.id.signup);
         btnlogin=findViewById(R.id.btnlogin);
         showpassword=findViewById(R.id.showpassword);
 
@@ -54,7 +56,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        button.setOnClickListener(new View.OnClickListener() {
+
+
+
+        signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -62,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
 
     }
 
